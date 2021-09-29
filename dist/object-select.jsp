@@ -347,10 +347,52 @@
                     </div>
                 </section>
 
+                <center>
+                  <form action="input_video.jsp" method="get">
+                    <input type="submit" class="btn btn-lg btn-primary" value="객체 추가 모드 변경"></input>
+                  </form>
+                </center>
+
             </div>
 
-              <div class="page-content">
-              </div>
+            <div class="page-content">
+              <section class="section">
+                  <div class="card">
+                      <div class="card-header">
+                          <h4 class="card-title">객체 정보</h4>
+                      </div>
+
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="disabledInput">선택된 객체</label>
+                                    <input type="text" class="form-control" id="readonlyInput" readonly="readonly"
+                                        value="선택된 객체 표시해야함 선택 안 됬으면 안 넘어가게 해야함">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="basicInput">객체 클래스 ID 변경</label>
+                                    <input type="text" class="form-control" id="basicInput"
+                                        placeholder="변경할 클래스 ID 입력">
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <center>
+                  <form action="input_video.jsp" method="get">
+                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
+                  </form>
+              </center>
+
+          </div>
+
+
+
 
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
