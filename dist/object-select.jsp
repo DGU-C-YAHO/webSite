@@ -39,7 +39,7 @@
                         <li class="sidebar-title">Order</li>
 
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>홈</span>
                             </a>
@@ -61,7 +61,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.html" class='sidebar-link'>
+                            <a href="input_video.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -76,7 +76,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추출 설정</span>
                             </a>
@@ -91,7 +91,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -106,7 +106,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
