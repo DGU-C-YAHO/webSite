@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <html lang="ko">
 
 <head>
@@ -342,9 +344,7 @@
             </div>
 
             <div class="page-content">
-              <%
-                
-              %>
+
             </div>
 
             <footer>
