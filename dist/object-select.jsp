@@ -221,7 +221,7 @@
                                               <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="객체 리스트 보기"
                                               form="2">
                                             </form>
-                                          </center>  
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -364,7 +364,7 @@
                 </section>
 
                 <center>
-                  <form action="input_video.jsp" method="get">
+                  <form action="object-add.jsp" method="get">
                     <input type="submit" class="btn btn-lg btn-primary" value="객체 추가 모드 변경"></input>
                   </form>
                 </center>
