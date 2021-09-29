@@ -12,6 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
+    <script type="text/javascript">
+      function abc(){
+        <%%>
+      }
+    </script>
+
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
@@ -38,7 +44,7 @@
                     <ul class="menu">
                         <li class="sidebar-title">Order</li>
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item">
                             <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>홈</span>
@@ -49,6 +55,21 @@
                             <a href="object-select.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 선택</span>
+                            </a>
+                        </li>
+
+                        <div style="margin:0 auto; text-align:center;">
+                          <ul style="display: table; margin: auto; padding:0;">
+                            <li class="sidebar-item">
+                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
+                            </li>
+                          </ul>
+                        </div>
+
+                        <li class="sidebar-item active ">
+                            <a href="object-select.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>객체 추가</span>
                             </a>
                         </li>
 
@@ -76,7 +97,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="object-settings1.jsp" class='sidebar-link'>
+                            <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추출 설정</span>
                             </a>
@@ -126,81 +147,60 @@
             </header>
 
             <div class="page-heading">
-                <h3>객체 추출 서비스</h3>
-                <section id="groups">
-                    <div class="row match-height">
-                        <div class="col-12 mt-3 mb-1">
-                            <h4 class="section-title text-uppercase">객체 추출 프로세스</h4>
+                <h3>객체를 추가하세요!</h3>
+                <section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">객체 추가 단계 이용 메뉴얼</h4>
                         </div>
-                    </div>
-                    <div class="row match-height">
-                        <div class="col-12">
-                            <div class="card-group">
-                                <div class="card">
-                                    <div class="card-content">
-                                        <img class="card-img-top img-fluid" src="assets/images/samples/1.png"
-                                            alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">추출할 객체를 선정하세요</h4>
-                                            <p class="card-text">
-                                                추출할 객체를 선정하세요! 우리 서비스는 약 80개의 객체에 대한 추출 서비스를 제공합니다.
-                                              원하는 객체가 없을 시 객체 추가 버튼을 눌러주세요!</p>
-                                            <small class="text-muted">Last updated 3 mins ago</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-content">
-                                        <img class="card-img-top img-fluid" src="assets/images/samples/2.png"
-                                            alt="Card image cap" />
-                                        <div class="card-body">
-                                            <h4 class="card-title">영상 입력</h4>
-                                            <p class="card-text">
-                                                해당되는 객체를 추출할 영상을 입력해주세요 Youtube 링크와 영상 파일 업로드 둘 다 가능합니다!
-                                            </p>
-                                            <small class="text-muted">Last updated 3 mins ago</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-content">
-                                        <img class="card-img-top img-fluid" src="assets/images/samples/3.png"
-                                            alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">사용자 추출 설정</h4>
-                                            <p class="card-text">
-                                                객체 추출 관련 설정을 완료해주세요!
-                                            </p>
-                                            <small class="text-muted">Last updated 3 mins ago</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-content">
-                                        <img class="card-img-top img-fluid" src="assets/images/samples/4.png"
-                                            alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">파일 다운로드</h4>
-                                            <p class="card-text">
-                                                제작된 데이터를 다운받으세요!
-                                            </p>
-                                            <small class="text-muted">Last updated 3 mins ago</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card-body">
+                          1. 객체 클래스 이름과 객체 클래스 ID를 입력해주세요<br>
+                          2. 소량(300~800장)정도의 학습 데이터를 입력해주세요
                         </div>
                     </div>
                 </section>
+
             </div>
 
             <div class="page-content">
+              <section class="section">
+                  <div class="card">
+                      <div class="card-header">
+                          <h4 class="card-title">추가할 객체 정보</h4>
+                      </div>
+
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="disabledInput">추가할 객체 이름</label>
+                                    <input type="text" class="form-control" id="readonlyInput"
+                                        placeholder="추가할 객체 이름 반드시 입력되어야함" required>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="basicInput">추가할 객체 ID</label>
+                                    <input type="text" class="form-control" id="basicInput"
+                                        placeholder="추가할 객체 ID 반드시 입력되어야함" required>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </section>
+
               <center>
-                <form action="object-select.jsp" method="get">
-                  <input type="submit" class="btn btn-lg btn-primary" value="객체 추출 시작"></input>
-                </form>
+                  <form action="input_video.jsp" method="get">
+                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
+                  </form>
               </center>
-            </div>
+
+          </div>
+
+
+
 
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
@@ -215,6 +215,7 @@
             </footer>
         </div>
     </div>
+
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
@@ -222,6 +223,7 @@
     <script src="assets/js/pages/dashboard.js"></script>
 
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
