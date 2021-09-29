@@ -164,10 +164,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-primary"type="button" value="객체 리스트 보기"
                                               form="0">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -188,10 +190,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-info"type="button" value="객체 리스트 보기"
                                               form="1">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -212,10 +216,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="객체 리스트 보기"
                                               form="2">
-                                          </form>
+                                            </form>
+                                          </center>  
                                       </div>
                                   </div>
                               </div>
@@ -236,10 +242,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-danger"type="button" value="객체 리스트 보기"
                                               form="3">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -263,10 +271,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-primary"type="button" value="객체 리스트 보기"
                                               form="4">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -287,10 +297,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-info"type="button" value="객체 리스트 보기"
                                               form="5">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -311,10 +323,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="객체 리스트 보기"
                                               form="6">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
@@ -335,10 +349,12 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <form>
+                                          <center>
+                                            <form>
                                               <input style="margin:0 auto;" class = "btn btn-outline-danger"type="button" value="객체 리스트 보기"
                                               form="7">
-                                          </form>
+                                            </form>
+                                          </center>
                                       </div>
                                   </div>
                               </div>
