@@ -12,6 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
+    <script type="text/javascript">
+      function abc(){
+        <%%>
+      }
+    </script>
+
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
@@ -343,9 +349,8 @@
 
             </div>
 
-            <div class="page-content">
-
-            </div>
+              <div class="page-content">
+              </div>
 
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
