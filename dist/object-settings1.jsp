@@ -66,7 +66,7 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item ">
                             <a href="object-select.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추가</span>
@@ -96,7 +96,7 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추출 설정</span>
@@ -112,7 +112,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="spinner-page.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -147,7 +147,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>객체를 추가하세요!</h3>
+                <h3>추출할 객체를 설정해 주세요!</h3>
                 <section class="section">
                     <div class="card">
                         <div class="card-header">

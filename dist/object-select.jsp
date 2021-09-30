@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
-    <script type="text/javascript">
-      function abc(){
-        <%%>
-      }
+    <script type="text/javascript/">
+      $(function (){
+    	   $("#btn_toggle").click(function (){
+      	    $("#Toggle").toggle();
+          });
+        });
     </script>
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
@@ -97,7 +99,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="spinner-page.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -166,7 +168,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-primary"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-primary" type="button" value="탈 것 리스트 보기"
                                               form="0">
                                             </form>
                                           </center>
@@ -192,7 +194,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-info"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-info"type="button" value="생물 리스트 보기"
                                               form="1">
                                             </form>
                                           </center>
@@ -218,7 +220,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="음식 리스트 보기"
                                               form="2">
                                             </form>
                                           </center>
@@ -244,7 +246,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-danger"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-danger"type="button" value="식기도구 & 주방가전 리스트 보기"
                                               form="3">
                                             </form>
                                           </center>
@@ -273,7 +275,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-primary"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-primary"type="button" value="스포츠(도구) 리스트 보기"
                                               form="4">
                                             </form>
                                           </center>
@@ -299,7 +301,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-info"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-info"type="button" value="소지품 리스트 보기"
                                               form="5">
                                             </form>
                                           </center>
@@ -325,7 +327,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-success"type="button" value="가구 & 전자기기 리스트 보기"
                                               form="6">
                                             </form>
                                           </center>
@@ -351,7 +353,7 @@
                                           <br>
                                           <center>
                                             <form>
-                                              <input style="margin:0 auto;" class = "btn btn-outline-danger"type="button" value="객체 리스트 보기"
+                                              <input style="margin:0 auto;" class = "btn btn-outline-danger"type="button" value="기타 리스트 보기"
                                               form="7">
                                             </form>
                                           </center>
@@ -368,6 +370,28 @@
                     <input type="submit" class="btn btn-lg btn-primary" value="객체 추가 모드 변경"></input>
                   </form>
                 </center>
+
+                <div id="Toggle" style="display:none">
+
+                  <div class="col-6 col-lg-3 col-md-6">
+                      <div class="card">
+                          <div class="card-body px-3 py-4-5">
+                              <div class="row">
+                                <button type="button" class="btn btn-primary">자전거</button>
+                                <button type="button" class="btn btn-primary">자동차</button>
+                                <button type="button" class="btn btn-primary">오토바이</button>
+                                <button type="button" class="btn btn-primary">비행기</button>
+                                <button type="button" class="btn btn-primary">버스</button>
+                                <button type="button" class="btn btn-primary">기차</button>
+                                <button type="button" class="btn btn-primary">트럭</button>
+                                <button type="button" class="btn btn-primary">보트</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                </div>
 
             </div>
 

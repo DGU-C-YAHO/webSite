@@ -10,27 +10,13 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <script src = "http://code.jquery.com/jquery-1.7.1.js"></script>
-    <script src="js/upload.js"></script>
-    <script src="js/formadd.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="js/style.css">
-
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <script type="text/javascript">
-      function mainfile(){
-        location.href = "/mainfile";
-      }
-      function mainlink(){
-        location.href ="/mainlink";
-      }
-      function addobj(){
-        location.href ="/addobj";
+      function abc(){
+        <%%>
       }
     </script>
-
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
@@ -80,7 +66,22 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item ">
+                            <a href="object-select.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>객체 추가</span>
+                            </a>
+                        </li>
+
+                        <div style="margin:0 auto; text-align:center;">
+                          <ul style="display: table; margin: auto; padding:0;">
+                            <li class="sidebar-item">
+                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
+                            </li>
+                          </ul>
+                        </div>
+
+                        <li class="sidebar-item">
                             <a href="input_video.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
@@ -96,7 +97,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="spinner-page.jsp" class='sidebar-link'>
+                            <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추출 설정</span>
                             </a>
@@ -110,7 +111,7 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a href="index.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
@@ -146,45 +147,28 @@
             </header>
 
             <div class="page-heading">
-                <h3>영상을 올려주세요!</h3>
+                <h3>추출 중 입니다.</h3>
                 <section class="section">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">영상 업로드 메뉴얼</h4>
+                            <h4 class="card-title">추출중입니다.</h4>
                         </div>
                         <div class="card-body">
-                          1. 유튜브 영상을 사용하실 거면 링크를 넣어주세요<br>
-                          2. 영상을 가지고 계시면 직접 올려주세요 <br>
-                          주의사항: 영상 저작권과 영상에 나오는 개인정보 유출에 주의해주세요. 본 서비스는 해당 부분에서 생긴 문제에 대해 책임을 지지 않습니다.
+                          1. 추출 시간은 영상 길이와 화질에 따라 달라집니다.<br>
+                          2. 영상의 개인정보에 주의해주세요. <br>
+                          3. 업로드된 영상은 실행이 끝나면 바로 서버에서 지워집니다.
                         </div>
                     </div>
                 </section>
 
-                <form action="/uploadobj" method="post" enctype="multipart/form-data">
-                  <div class="file-upload">
-                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">파일 선택</button>
-                    <div class="image-upload-wrap">
-                      <input class="file-upload-input" type="file" name="uploadFile" onchange="readURL(this);" accept="video/*" />
-                      <div class="drag-text">
-                        <h3>또는 영상 파일을 여기에 올려주세요</h3>
-                      </div>
-                    </div>
-                    <div class="file-upload-content">
-                      <img class="file-upload-image" src="#" alt="video" />
-                      <div class="image-title-wrap">
-                        <button type="button" onclick="removeUpload()" class="remove-image">지우기 <span class="image-title">Uploaded</span></button>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <input class="input-btn" type="submit" name="Upload" value="객체 선택하기" onclick="uploadFile()">
-                </form>
-
             </div>
 
             <div class="page-content">
-                <section class="row">
-                    <div class="col-12 col-lg-9">
+              <center>
+                <img src="assets/vendors/svg-loaders/ball-triangle.svg" class="me-4"
+                    style="width: 6rem" alt="audio">
+              </center>
+          </div>
 
 
             <footer>
