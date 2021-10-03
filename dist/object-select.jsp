@@ -408,14 +408,14 @@
                                 <div class="form-group">
                                     <label for="disabledInput">선택된 객체</label>
                                     <input type="text" class="form-control" id="readonlyInput" readonly="readonly"
-                                        value="선택된 객체 표시해야함 선택 안 됬으면 안 넘어가게 해야함">
+                                        placeholder="선택된 객체 표시해야함 선택 안 됬으면 안 넘어가게 해야함" required>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="basicInput">객체 클래스 ID 변경</label>
+                                    <label for="basicInput">객체 클래스 ID 입력</label>
                                     <input type="text" class="form-control" id="basicInput"
-                                        placeholder="변경할 클래스 ID 입력">
+                                        placeholder="변경할 클래스 ID 입력" required>
                                 </div>
                               </div>
                           </div>

@@ -33,7 +33,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -66,23 +66,8 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item ">
-                            <a href="object-select.jsp" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>객체 추가</span>
-                            </a>
-                        </li>
-
-                        <div style="margin:0 auto; text-align:center;">
-                          <ul style="display: table; margin: auto; padding:0;">
-                            <li class="sidebar-item">
-                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
-                            </li>
-                          </ul>
-                        </div>
-
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="input_video.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -97,7 +82,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="object-settings1.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추출 설정</span>
                             </a>
@@ -112,7 +97,7 @@
                         </div>
 
                         <li class="sidebar-item active">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="spinner-page.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
