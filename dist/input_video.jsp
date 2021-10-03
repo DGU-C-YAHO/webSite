@@ -10,13 +10,29 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <script src = "http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/formadd.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="js/style.css">
+
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
+
+
     <script type="text/javascript">
-      function abc(){
-        <%%>
+      function mainfile(){
+        location.href = "/mainfile";
+      }
+      function mainlink(){
+        location.href ="/mainlink";
+      }
+      function addobj(){
+        location.href ="/addobj";
       }
     </script>
+
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
@@ -33,7 +49,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -66,25 +82,10 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item">
-                            <a href="input_video.html" class='sidebar-link'>
+                        <li class="sidebar-item active">
+                            <a href="input_video.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
-                            </a>
-                        </li>
-
-                        <div style="margin:0 auto; text-align:center;">
-                          <ul style="display: table; margin: auto; padding:0;">
-                            <li class="sidebar-item">
-                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
-                            </li>
-                          </ul>
-                        </div>
-
-                        <li class="sidebar-item active">
-                            <a href="index.jsp" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>객체 추출 설정</span>
                             </a>
                         </li>
 
@@ -112,7 +113,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="index.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
@@ -132,59 +133,80 @@
             </header>
 
             <div class="page-heading">
-                <h3>추출할 객체를 설정해 주세요!</h3>
+                <h3>영상을 올려주세요!</h3>
                 <section class="section">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">객체 추가 단계 이용 메뉴얼</h4>
+                            <h4 class="card-title">영상 업로드 메뉴얼</h4>
                         </div>
                         <div class="card-body">
-                          1. 객체 클래스 이름과 객체 클래스 ID를 입력해주세요<br>
-                          2. 소량(300~800장)정도의 학습 데이터를 입력해주세요
+                          1. 유튜브 영상을 사용하실 거면 링크를 넣어주세요<br>
+                          2. 영상을 가지고 계시면 직접 올려주세요 <br>
+                          3. 데이터를 추출할 영상 구간을 입력해주세요<br>
+                          주의사항: 영상 저작권과 영상에 나오는 개인정보 유출에 주의해주세요. 본 서비스는 해당 부분에서 생긴 문제에 대해 책임을 지지 않습니다.
                         </div>
                     </div>
                 </section>
+              <div>
+                <form action="/uploadobj" method="post" enctype="multipart/form-data">
+                  <section id="input-file-browser">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">영상 파일 업로드</h4>
+                                </div>
 
-            </div>
-
-            <div class="page-content">
-              <section class="section">
+                                <div class="card-body">
+                                                <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
+                                                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
                   <div class="card">
                       <div class="card-header">
-                          <h4 class="card-title">추가할 객체 정보</h4>
+                          <h4 class="card-title">유튜브 영상 링크</h4>
                       </div>
 
+                      <div class="card-body">
+                                  <div class="form-group">
+                                      <label for="basicInput">유튜브 영상 링크 주소를 입력해 주세요.</label>
+                                      <input type="text" style="width:100%; size:100;" class="form-control" id="basicInput"
+                                          placeholder="예) https://www.youtube.com/" >
+                                  </div>
+                      </div>
                       <div class="card-body">
                           <div class="row">
                               <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="disabledInput">추가할 객체 이름</label>
-                                    <input type="text" class="form-control" id="readonlyInput"
-                                        placeholder="추가할 객체 이름 반드시 입력되어야함" required>
+                                    <label for="disabledInput">영상 시작 시간</label>
+                                    <input type="text" class="form-control" id="starttime" required>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="basicInput">추가할 객체 ID</label>
-                                    <input type="text" class="form-control" id="basicInput"
-                                        placeholder="추가할 객체 ID 반드시 입력되어야함" required>
+                                    <label for="basicInput">영상 종료 시간</label>
+                                    <input type="text" class="form-control" id="endtime" required>
                                 </div>
                               </div>
                           </div>
                       </div>
-
                   </div>
               </section>
+                  <center>
+                  <input style="text-align: middle;" class="btn btn-primary" type="submit" name="Upload" value="추출 시작" onclick="uploadFile()">
+                </center>
+                </form>
+              </div>
+            </div>
 
-              <center>
-                  <form action="input_video.jsp" method="get">
-                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
-                  </form>
-              </center>
-
-          </div>
-
-
+            <div class="page-content">
+                <section class="row">
+                    <div class="col-12 col-lg-9">
 
 
             <footer>

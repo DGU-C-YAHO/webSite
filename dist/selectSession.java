@@ -6,8 +6,8 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/loginCheck")
-public class loginCheck extends HttpServlet {
+@WebServlet("/website/dist/selectSession")
+public class selectSession extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -15,16 +15,14 @@ public class loginCheck extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
-        String userId = request.getParameter("userID");
-        String userPwd = request.getParameter("userPwd");
-
-        out.println(userId);
-        out.println(userPwd);
+        String selectedOBJ = request.getParameter("selectedOBJ");
+        String OBJid = request.getParameter("OBJid");
 
         HttpSession session = request.getSession();
-        session.setAttribute("memberId", userId);
+        session.setAttribute("selectedOBJ", selectedOBJ);
+        session.setAttribute("OBJid", OBJid);
 
         // view 페이지로 응답해줌
-        response.sendRedirect("loginOk.jsp");
+        response.sendRedirect("input_video.html");
     }
 }

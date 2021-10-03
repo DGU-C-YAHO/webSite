@@ -69,24 +69,9 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.html" class='sidebar-link'>
+                            <a href="input_video.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
-                            </a>
-                        </li>
-
-                        <div style="margin:0 auto; text-align:center;">
-                          <ul style="display: table; margin: auto; padding:0;">
-                            <li class="sidebar-item">
-                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
-                            </li>
-                          </ul>
-                        </div>
-
-                        <li class="sidebar-item">
-                            <a href="object-settings1.jsp" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>객체 추출 설정</span>
                             </a>
                         </li>
 
@@ -396,6 +381,7 @@
             </div>
 
             <div class="page-content">
+              <form action="selectSession" method="post">
               <section class="section">
                   <div class="card">
                       <div class="card-header">
@@ -407,14 +393,14 @@
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="disabledInput">선택된 객체</label>
-                                    <input type="text" class="form-control" id="readonlyInput" readonly="readonly"
+                                    <input type="text" class="form-control" name = "selectedOBJ" id="readonlyInput" readonly="readonly"
                                         placeholder="선택된 객체 표시해야함 선택 안 됬으면 안 넘어가게 해야함" required>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="basicInput">객체 클래스 ID 입력</label>
-                                    <input type="text" class="form-control" id="basicInput"
+                                    <input type="text" class="form-control" name= "OBJid" id="basicInput"
                                         placeholder="변경할 클래스 ID 입력" required>
                                 </div>
                               </div>
@@ -424,10 +410,10 @@
               </section>
 
               <center>
-                  <form action="input_video.html" method="get">
                     <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
-                  </form>
               </center>
+
+              </form>
 
           </div>
 

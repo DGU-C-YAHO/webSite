@@ -61,7 +61,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.html" class='sidebar-link'>
+                            <a href="input_video.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -75,20 +75,6 @@
                           </ul>
                         </div>
 
-                        <li class="sidebar-item">
-                            <a href="object-settings1.jsp" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>객체 추출 설정</span>
-                            </a>
-                        </li>
-
-                        <div style="margin:0 auto; text-align:center;">
-                          <ul style="display: table; margin: auto; padding:0;">
-                            <li class="sidebar-item">
-                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
-                            </li>
-                          </ul>
-                        </div>
 
                         <li class="sidebar-item">
                             <a href="spinner-page.jsp" class='sidebar-link'>
