@@ -27,7 +27,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -61,7 +61,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="input_video.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>

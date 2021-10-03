@@ -35,7 +35,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -69,7 +69,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="input_video.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -366,7 +366,7 @@
                 </section>
 
                 <center>
-                  <form action="object-add.jsp" method="get">
+                  <form action="object-add.html" method="get">
                     <input type="submit" class="btn btn-lg btn-primary" value="객체 추가 모드 변경"></input>
                   </form>
                 </center>
@@ -424,15 +424,12 @@
               </section>
 
               <center>
-                  <form action="input_video.jsp" method="get">
+                  <form action="input_video.html" method="get">
                     <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
                   </form>
               </center>
 
           </div>
-
-
-
 
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
