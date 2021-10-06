@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학습 데이터 자동 추출</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <script src="js/select.js"></script>
+    <script type="text/javascript/">
+      $(function (){
+    	   $("#btn_toggle").click(function (){
+      	    $("#Toggle").toggle();
+          });
+        });
+    </script>
+    <script>
+      function myFunction1() {
+        var veh = document.getElementById("vehicle");
+        if (veh.style.display === "none") {
+          veh.style.display = "block";
+        } else {
+          veh.style.display = "none";
+        }
+      }
+      function myFunction2() {
+        var liv = document.getElementById("livingThings");
+        if (liv.style.display === "none") {
+          liv.style.display = "block";
+        } else {
+          liv.style.display = "none";
+        }
+      }
+      function myFunction3() {
+        var foo = document.getElementById("foods");
+        if (foo.style.display === "none") {
+          foo.style.display = "block";
+        } else {
+          foo.style.display = "none";
+        }
+      }
+      function myFunction4() {
+        var kit = document.getElementById("kitchenTools");
+        if (kit.style.display === "none") {
+          kit.style.display = "block";
+        } else {
+          kit.style.display = "none";
+        }
+      }
+      function myFunction5() {
+        var spo = document.getElementById("sports");
+        if (spo.style.display === "none") {
+          spo.style.display = "block";
+        } else {
+          spo.style.display = "none";
+        }
+      }
+      function myFunction6() {
+        var bel = document.getElementById("belongings");
+        if (bel.style.display === "none") {
+          bel.style.display = "block";
+        } else {
+          bel.style.display = "none";
+        }
+      }
+      function myFunction7() {
+        var furn = document.getElementById("furn_elect");
+        if (furn.style.display === "none") {
+          furn.style.display = "block";
+        } else {
+          furn.style.display = "none";
+        }
+      }
+      function myFunction8() {
+        var oth = document.getElementById("otherThings");
+        if (oth.style.display === "none") {
+          oth.style.display = "block";
+        } else {
+          oth.style.display = "none";
+        }
+      }
+</script>
+    <style>
+      #divToggle{
+        width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Order</li>
+
+                        <li class="sidebar-item">
+                            <a href="index.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>홈</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item active ">
+                            <a href="object-select.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>객체 선택</span>
+                            </a>
+                        </li>
+
+                        <div style="margin:0 auto; text-align:center;">
+                          <ul style="display: table; margin: auto; padding:0;">
+                            <li class="sidebar-item">
+                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
+                            </li>
+                          </ul>
+                        </div>
+
+                        <li class="sidebar-item">
+                            <a href="input_video.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>영상 입력</span>
+                            </a>
+                        </li>
+
+                        <div style="margin:0 auto; text-align:center;">
+                          <ul style="display: table; margin: auto; padding:0;">
+                            <li class="sidebar-item">
+                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
+                            </li>
+                          </ul>
+                        </div>
+
+                        <li class="sidebar-item">
+                            <a href="spinner-page.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>데이터 추출 중</span>
+                            </a>
+                        </li>
+
+                        <div style="margin:0 auto; text-align:center;">
+                          <ul style="display: table; margin: auto; padding:0;">
+                            <li class="sidebar-item">
+                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
+                            </li>
+                          </ul>
+                        </div>
+
+                        <li class="sidebar-item">
+                            <a href="index.jsp" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>추출 완료</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <h3>객체를 선택하세요!</h3>
+                <section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">객체 선택 단계 이용 메뉴얼</h4>
+                        </div>
+                        <div class="card-body">
+                          1. 영상에서 추출하고픈 객체를 선택해주세요<br>
+                          2. 만약 추출하고픈 객체가 없으면 맨 아래 객체 추가 버튼을 눌러주세요
+                        </div>
+                    </div>
+                </section>
+
+                <section class="row">
+                    <div class="col-12 col-lg-9">
+                      <div class="row">
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon purple">
+                                                  <i class="iconly-boldShow"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">탈 것</h6>
+                                              <h6 class="font-extrabold mb-0">8개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction1()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">탈 것 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="vehicle">
+                                            <br>
+                                            <h6 class="text-muted font-semibold">자전거</h6>
+                                                <h6 class="text-muted font-semibold">자동차</h6>
+                                                <h6 class="text-muted font-semibold">오토바이</h6>
+                                                <h6 class="text-muted font-semibold">비행기</h6>
+                                                <h6 class="text-muted font-semibold">버스</h6>
+                                                <h6 class="text-muted font-semibold">기차</h6>
+                                                <h6 class="text-muted font-semibold">트럭</h6>
+                                                <h6 class="text-muted font-semibold">보트</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon blue">
+                                                  <i class="iconly-boldProfile"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">생믈</h6>
+                                              <h6 class="font-extrabold mb-0">10종</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction2()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">생물 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="livingThings">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">사람</h6>
+                                                <h6 class="text-muted font-semibold">고양이</h6>
+                                                <h6 class="text-muted font-semibold">개</h6>
+                                                <h6 class="text-muted font-semibold">말</h6>
+                                                <h6 class="text-muted font-semibold">양</h6>
+                                                <h6 class="text-muted font-semibold">소</h6>
+                                                <h6 class="text-muted font-semibold">코끼리</h6>
+                                                <h6 class="text-muted font-semibold">곰</h6>
+                                                <h6 class="text-muted font-semibold">얼룩말</h6>
+                                                <h6 class="text-muted font-semibold">기린</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon green">
+                                                  <i class="iconly-boldAdd-User"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">음식</h6>
+                                              <h6 class="font-extrabold mb-0">10개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction3()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">음식 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="foods">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">바나나</h6>
+                                                <h6 class="text-muted font-semibold">사과</h6>
+                                                <h6 class="text-muted font-semibold">샌드위치</h6>
+                                                <h6 class="text-muted font-semibold">오렌지</h6>
+                                                <h6 class="text-muted font-semibold">브로콜리</h6>
+                                                <h6 class="text-muted font-semibold">당근</h6>
+                                                <h6 class="text-muted font-semibold">핫도그</h6>
+                                                <h6 class="text-muted font-semibold">피자</h6>
+                                                <h6 class="text-muted font-semibold">도넛</h6>
+                                                <h6 class="text-muted font-semibold">케이크</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon red">
+                                                  <i class="iconly-boldBookmark"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">식기도구 & 주방가전</h6>
+                                              <h6 class="font-extrabold mb-0">12개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction4()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">식기도구 & 주방가전 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="kitchenTools">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">병</h6>
+                                                <h6 class="text-muted font-semibold">와인 잔</h6>
+                                                <h6 class="text-muted font-semibold">컵</h6>
+                                                <h6 class="text-muted font-semibold">포크</h6>
+                                                <h6 class="text-muted font-semibold">칼</h6>
+                                                <h6 class="text-muted font-semibold">숟가락</h6>
+                                                <h6 class="text-muted font-semibold">그릇</h6>
+                                                <h6 class="text-muted font-semibold">전자 레인지</h6>
+                                                <h6 class="text-muted font-semibold">오븐</h6>
+                                                <h6 class="text-muted font-semibold">토스터</h6>
+                                                <h6 class="text-muted font-semibold">싱크대</h6>
+                                                <h6 class="text-muted font-semibold">냉장고</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon purple">
+                                                  <i class="iconly-boldShow"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">스포츠(도구)</h6>
+                                              <h6 class="font-extrabold mb-0">10개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction5()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">스포츠(도구) 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="sports">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">프리스비</h6>
+                                                <h6 class="text-muted font-semibold">스키</h6>
+                                                <h6 class="text-muted font-semibold">스노우 보드</h6>
+                                                <h6 class="text-muted font-semibold">스포츠 공</h6>
+                                                <h6 class="text-muted font-semibold">연</h6>
+                                                <h6 class="text-muted font-semibold">야구 방망이</h6>
+                                                <h6 class="text-muted font-semibold">야구 글러브</h6>
+                                                <h6 class="text-muted font-semibold">스케이트 보드</h6>
+                                                <h6 class="text-muted font-semibold">서핑 보드</h6>
+                                                <h6 class="text-muted font-semibold">테니스 라켓</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon blue">
+                                                  <i class="iconly-boldProfile"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">소지품</h6>
+                                              <h6 class="font-extrabold mb-0">6개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction6()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">소지품 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="belongings">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">배낭</h6>
+                                                <h6 class="text-muted font-semibold">우산</h6>
+                                                <h6 class="text-muted font-semibold">핸드백</h6>
+                                                <h6 class="text-muted font-semibold">넥타이</h6>
+                                                <h6 class="text-muted font-semibold">여행 가방</h6>
+                                                <h6 class="text-muted font-semibold">시계</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon green">
+                                                  <i class="iconly-boldAdd-User"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">가구 & 전자기기</h6>
+                                              <h6 class="font-extrabold mb-0">12개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction7()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">가구 & 전자기기 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="furn_elect">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">의자</h6>
+                                                <h6 class="text-muted font-semibold">소파</h6>
+                                                <h6 class="text-muted font-semibold">화분</h6>
+                                                <h6 class="text-muted font-semibold">침대</h6>
+                                                <h6 class="text-muted font-semibold">식탁</h6>
+                                                <h6 class="text-muted font-semibold">TV 모니터</h6>
+                                                <h6 class="text-muted font-semibold">휴대용 퍼스널 컴퓨터</h6>
+                                                <h6 class="text-muted font-semibold">휴대 전화</h6>
+                                                <h6 class="text-muted font-semibold">키보드</h6>
+                                                <h6 class="text-muted font-semibold">마우스</h6>
+                                                <h6 class="text-muted font-semibold">리모컨</h6>
+                                                <h6 class="text-muted font-semibold">헤어 드라이어</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6 col-lg-3 col-md-6">
+                              <div class="card">
+                                  <div class="card-body px-3 py-4-5">
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="stats-icon red">
+                                                  <i class="iconly-boldBookmark"></i>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <h6 class="text-muted font-semibold">기타</h6>
+                                              <h6 class="font-extrabold mb-0">11개</h6>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <button onclick="myFunction8()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">기타 리스트 보기</button>
+                                          <div style="text-align: center; display:none;" id="otherThings">
+                                            <br>
+                                                <h6 class="text-muted font-semibold">신호등</h6>
+                                                <h6 class="text-muted font-semibold">소화전</h6>
+                                                <h6 class="text-muted font-semibold">정지 표시판</h6>
+                                                <h6 class="text-muted font-semibold">주차권 자동 판매기</h6>
+                                                <h6 class="text-muted font-semibold">벤치</h6>
+                                                <h6 class="text-muted font-semibold">변기</h6>
+                                                <h6 class="text-muted font-semibold">도서</h6>
+                                                <h6 class="text-muted font-semibold">꽃병</h6>
+                                                <h6 class="text-muted font-semibold">가위</h6>
+                                                <h6 class="text-muted font-semibold">곰인형</h6>
+                                                <h6 class="text-muted font-semibold">칫솔</h6>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </section>
+
+                <center>
+                  <form action="object-add.html" method="get">
+                    <input type="submit" class="btn btn-lg btn-primary" value="객체 추가 모드 변경"></input>
+                  </form>
+                </center>
+
+                <div id="Toggle" style="display:none">
+
+                  <div class="col-6 col-lg-3 col-md-6">
+                      <div class="card">
+                          <div class="card-body px-3 py-4-5">
+                              <div class="row">
+                                <button type="button" class="btn btn-primary">자전거</button>
+                                <button type="button" class="btn btn-primary">자동차</button>
+                                <button type="button" class="btn btn-primary">오토바이</button>
+                                <button type="button" class="btn btn-primary">비행기</button>
+                                <button type="button" class="btn btn-primary">버스</button>
+                                <button type="button" class="btn btn-primary">기차</button>
+                                <button type="button" class="btn btn-primary">트럭</button>
+                                <button type="button" class="btn btn-primary">보트</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="page-content">
+              <form action="selectSession" method="post">
+              <section class="section">
+                  <div class="card">
+                      <div class="card-header">
+                          <h4 class="card-title">객체 정보</h4>
+                      </div>
+
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="disabledInput">선택된 객체</label>
+                                    <input type="text" class="form-control" name = "selectedOBJ" id="readonlyInput" readonly="readonly"
+                                        placeholder="선택된 객체 표시해야함 선택 안 됬으면 안 넘어가게 해야함" required>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="basicInput">객체 클래스 ID 입력</label>
+                                    <input type="text" class="form-control" name= "OBJid" id="basicInput"
+                                        placeholder="변경할 클래스 ID 입력" required>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <center>
+                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
+              </center>
+
+              </form>
+
+          </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2021 &copy; Mazer</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="http://ahmadsaugi.com">A. Saugi</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
