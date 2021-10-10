@@ -29,6 +29,17 @@
       function addobj(){
         location.href ="/addobj";
       }
+
+      function vCheck(){
+        var nVideo = document.nVideo;
+        if(document.getElementById("youtubeURL").value == "" && document.getElementById("formFileMultiple").value==""){
+          alert("파일을 입력해주세요");
+        }
+        else{
+          location.href=""; 
+        }
+      }
+
     </script>
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
@@ -158,9 +169,17 @@
                         </div>
                         <div class="card-body">
                           <%
-                          Object lobj_getdata = session.getAttribute("selectedOBJ");
-                          String ls_getdata = (String)lobj_getdata;
-                          out.println(ls_getdata+"을 선택하셨습니다.");
+                          Object mo = session.getAttribute("mode");
+                          String mode = (String)mo;
+                          String name = "";
+                          if(mode == "1"){
+                            Object name1 = session.getAttribute("selectedOBJ");
+                            name = (String)name1;
+                          }else{
+                            Object name1 = session.getAttribute("plusOBJ");
+                            name = (String)name1;
+                          }
+                          out.println(name+"을 선택하셨습니다.");
                           %>
                           <br>
                           1. 유튜브 영상을 사용하실 거면 링크를 넣어주세요<br>
@@ -182,7 +201,7 @@
 
                                 <div class="card-body">
                                                 <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
-                                                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                                <input class="form-control" type="file" id="formFileMultiple" accept=".mp4 , .avi, .wmv, .mkv" multiple>
                                             </div>
                                 </div>
                             </div>
@@ -198,7 +217,7 @@
                       <div class="card-body">
                                   <div class="form-group">
                                       <label for="basicInput">유튜브 영상 링크 주소를 입력해 주세요.</label>
-                                      <input type="text" style="width:100%; size:100;" class="form-control" id="basicInput"
+                                      <input type="text" style="width:100%; size:100;" class="form-control" id="youtubeURL"
                                           placeholder="예) https://www.youtube.com/" >
                                   </div>
                       </div>
