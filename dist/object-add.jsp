@@ -22,6 +22,17 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+
+      <script>
+      function al(){
+          alert("먼저 영상 입력을 해주세요");
+      }
+
+      function al1(){
+        alert(" 값을 입력한 후 아래의 다음단계로 가는 버튼을 눌러주세요");
+      }
+
+      </script>
 </head>
 
 <body>
@@ -80,7 +91,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="Javascript: al1();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -95,7 +106,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="spinner-page.jsp" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -110,7 +121,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="result.html" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
@@ -157,14 +168,14 @@
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="disabledInput">추가할 객체 이름</label>
-                                    <input type="text" class="form-control" id="readonlyInput"
+                                    <input type="text" class="form-control" id="plusOBJ" name= "plusOBJ"
                                         placeholder="추가할 객체 이름 반드시 입력되어야함" required>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="basicInput">추가할 객체 ID</label>
-                                    <input type="text" class="form-control" id="basicInput"
+                                    <input type="text" class="form-control" id="plusOBJID" name="plusOBJID"
                                         placeholder="추가할 객체 ID 반드시 입력되어야함" required>
                                 </div>
                               </div>
@@ -180,7 +191,7 @@
                             </div>
                             <div class="card-body">
                                             <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                            <input class="form-control" type="file" id="formFileMultiple" name="formFileMultiple" multiple required/>
                                         </div>
                             </div>
                         </div>
