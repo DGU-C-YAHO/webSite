@@ -36,8 +36,19 @@
           alert("파일을 입력해주세요");
         }
         else{
-          location.href=""; 
+          location.href="";
         }
+      }
+
+      function goAl(x){
+        var result = confirm("입력하신 영상 정보가 지워집니다. 돌아가시겠습니까?");
+        if(result){
+          location.href = x;
+        }
+      }
+
+      function al(){
+          alert("먼저 추출 실행을 해주세요");
       }
 
     </script>
@@ -57,7 +68,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="Javascript: goAl('index.jsp');"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -69,14 +80,14 @@
                         <li class="sidebar-title">Order</li>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="Javascript: goAl('index.jsp');" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>홈</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="object-select.jsp" class='sidebar-link'>
+                            <a href="Javascript: goAl('object-select.jsp');" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 선택</span>
                             </a>
@@ -95,7 +106,7 @@
                         String mode = (String)oMode;
                         if(mode == "2"){%>
                         <li class="sidebar-item">
-                            <a href="object-add.jsp" class='sidebar-link'>
+                            <a href="Javascript: goAl('object-add.jsp');" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추가</span>
                             </a>
@@ -111,7 +122,7 @@
                         <%}%>
 
                         <li class="sidebar-item active">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="#" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -141,7 +152,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="result.html" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
@@ -170,9 +181,9 @@
                         <div class="card-body">
                           <%
                           Object mo = session.getAttribute("mode");
-                          String mode = (String)mo;
+                          String mode1 = (String)mo;
                           String name = "";
-                          if(mode == "1"){
+                          if(mode1 == "1"){
                             Object name1 = session.getAttribute("selectedOBJ");
                             name = (String)name1;
                           }else{
