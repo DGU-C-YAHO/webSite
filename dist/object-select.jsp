@@ -102,6 +102,22 @@
         }
       }
 
+      function al(){
+          alert("먼저 영상 입력을 해주세요");
+      }
+
+      function al1(){
+        if(document.getElementById("selectedOB").value == ""){
+          alert("객체를 선택해주세요 원하시는 객체가 없으면 객체 추가 모드를 선택해주세요");
+        }
+        else if(document.getElementById("OBJid").value==""){
+          alert("정확한 어노테이션 추출을 위한 객체 ID를 입력해주세요");
+        }
+        else{
+          location.href="input_video.jsp";
+        }
+      }
+
 </script>
     <style>
       #divToggle{
@@ -161,7 +177,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="Javascript: al1();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -176,7 +192,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="spinner-page.jsp" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -191,7 +207,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="result.html" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
