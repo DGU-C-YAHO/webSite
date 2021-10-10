@@ -89,6 +89,19 @@
         document.getElementById("selectedOB").value = nameV;
       }
 
+      function vCheck(){
+        var nVideo = document.nVideo;
+        if(document.getElementById("selectedOB").value == ""){
+          alert("객체를 선택해주세요 원하시는 객체가 없으면 객체 추가 모드를 선택해주세요");
+        }
+        else if(document.getElementById("OBJid").value==""){
+          alert("정확한 어노테이션 추출을 위한 객체 ID를 입력해주세요");
+        }
+        else{
+          nVideo.submit();
+        }
+      }
+
 </script>
     <style>
       #divToggle{
@@ -525,7 +538,7 @@
             </div>
 
             <div class="page-content">
-              <form action="selectSession.jsp" method="get">
+              <form action="selectSession.jsp" method="get" name="nVideo">
               <section class="section">
                   <div class="card">
                       <div class="card-header">
@@ -544,7 +557,7 @@
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="basicInput">객체 클래스 ID 입력</label>
-                                    <input type="text" class="form-control" name= "OBJid" id="basicInput"
+                                    <input type="text" class="form-control" name= "OBJid" id="OBJid"
                                         placeholder="변경할 클래스 ID 입력" required>
                                 </div>
                               </div>
@@ -554,7 +567,7 @@
               </section>
 
               <center>
-                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"></input>
+                    <input type="submit" class="btn btn-lg btn-primary" onclick="vCheck()" value="다음 단계로"></input>
               </center>
 
               </form>
