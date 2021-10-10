@@ -113,7 +113,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="result.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
@@ -140,6 +140,12 @@
                             <h4 class="card-title">영상 업로드 메뉴얼</h4>
                         </div>
                         <div class="card-body">
+                          <%
+                          Object lobj_getdata = session.getAttribute("selectedOBJ");
+                          String ls_getdata = (String)lobj_getdata;
+                          out.println(ls_getdata+"을 선택하셨습니다.");
+                          %>
+                          <br>
                           1. 유튜브 영상을 사용하실 거면 링크를 넣어주세요<br>
                           2. 영상을 가지고 계시면 직접 올려주세요 <br>
                           3. 데이터를 추출할 영상 구간을 입력해주세요<br>

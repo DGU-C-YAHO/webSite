@@ -92,7 +92,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="result.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
@@ -182,7 +182,7 @@
 
             <div class="page-content">
               <center>
-                <form action="object-select.jsp" method="get">
+                <form action="object-select.html" method="get">
                   <input type="submit" class="btn btn-lg btn-primary" value="객체 추출 시작"></input>
                 </form>
               </center>
