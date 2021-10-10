@@ -3,6 +3,8 @@
     pageEncoding="utf-8"%>
 <html lang="ko">
 
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,26 +12,9 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <script src = "http://code.jquery.com/jquery-1.7.1.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="js/upload.js"></script>
     <script src="js/formadd.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="js/style.css">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-
-    <script type="text/javascript">
-      function mainfile(){
-        location.href = "/mainfile";
-      }
-      function mainlink(){
-        location.href ="/mainlink";
-      }
-      function addobj(){
-        location.href ="/addobj";
-      }
-    </script>
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
@@ -79,12 +64,8 @@
                           </ul>
                         </div>
 
-                        <%
-                        Object oMode = session.getAttribute("mode");
-                        String mode = (String)oMode;
-                        if(mode == "2"){%>
-                        <li class="sidebar-item">
-                            <a href="object-add.jsp" class='sidebar-link'>
+                        <li class="sidebar-item active ">
+                            <a href="object-add.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 추가</span>
                             </a>
@@ -97,9 +78,8 @@
                             </li>
                           </ul>
                         </div>
-                        <%}%>
 
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a href="input_video.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
@@ -150,86 +130,73 @@
             </header>
 
             <div class="page-heading">
-                <h3>영상을 올려주세요!</h3>
+                <h3>객체를 추가하세요!</h3>
                 <section class="section">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">영상 업로드 메뉴얼</h4>
+                            <h4 class="card-title">객체 추가 단계 이용 메뉴얼</h4>
                         </div>
                         <div class="card-body">
-                          <%
-                          Object lobj_getdata = session.getAttribute("selectedOBJ");
-                          String ls_getdata = (String)lobj_getdata;
-                          out.println(ls_getdata+"을 선택하셨습니다.");
-                          %>
-                          <br>
-                          1. 유튜브 영상을 사용하실 거면 링크를 넣어주세요<br>
-                          2. 영상을 가지고 계시면 직접 올려주세요 <br>
-                          3. 데이터를 추출할 영상 구간을 입력해주세요<br>
-                          주의사항: 영상 저작권과 영상에 나오는 개인정보 유출에 주의해주세요. 본 서비스는 해당 부분에서 생긴 문제에 대해 책임을 지지 않습니다.
+                          1. 객체 클래스 이름과 객체 클래스 ID를 입력해주세요<br>
+                          2. 소량(300~800장)정도의 학습 데이터를 입력해주세요
                         </div>
                     </div>
                 </section>
-              <div>
-                <form action="/uploadobj" method="post" enctype="multipart/form-data">
-                  <section id="input-file-browser">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">영상 파일 업로드</h4>
-                                </div>
 
-                                <div class="card-body">
-                                                <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
-                                                <input class="form-control" type="file" id="formFileMultiple" multiple>
-                                            </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section">
+            </div>
+            <form action="/uploadobj" method="post" enctype="multipart/form-data">
+            <div class="page-content">
+              <section class="section">
                   <div class="card">
                       <div class="card-header">
-                          <h4 class="card-title">유튜브 영상 링크</h4>
+                          <h4 class="card-title">추가할 객체 정보</h4>
                       </div>
 
-                      <div class="card-body">
-                                  <div class="form-group">
-                                      <label for="basicInput">유튜브 영상 링크 주소를 입력해 주세요.</label>
-                                      <input type="text" style="width:100%; size:100;" class="form-control" id="basicInput"
-                                          placeholder="예) https://www.youtube.com/" >
-                                  </div>
-                      </div>
                       <div class="card-body">
                           <div class="row">
                               <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="disabledInput">영상 시작 시간</label>
-                                    <input type="text" class="form-control" id="starttime" required>
+                                    <label for="disabledInput">추가할 객체 이름</label>
+                                    <input type="text" class="form-control" id="readonlyInput"
+                                        placeholder="추가할 객체 이름 반드시 입력되어야함" required>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="basicInput">영상 종료 시간</label>
-                                    <input type="text" class="form-control" id="endtime" required>
+                                    <label for="basicInput">추가할 객체 ID</label>
+                                    <input type="text" class="form-control" id="basicInput"
+                                        placeholder="추가할 객체 ID 반드시 입력되어야함" required>
                                 </div>
                               </div>
                           </div>
                       </div>
-                  </div>
-              </section>
-                  <center>
-                  <input style="text-align: middle;" class="btn btn-primary" type="submit" name="Upload" value="추출 시작" onclick="uploadFile()">
-                </center>
-                </form>
-              </div>
-            </div>
 
-            <div class="page-content">
-                <section class="row">
-                    <div class="col-12 col-lg-9">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">학습 데이터 업로드</h4>
+                            </div>
+                            <div class="card-body">
+                                            <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
+                                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
+
+              <center>
+                  <form action="input_video.html" method="get">
+                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로" onclick="uploadFile()"> </input>
+                  </form>
+              </center>
+              </form>
+          </div>
+
+
 
 
             <footer>

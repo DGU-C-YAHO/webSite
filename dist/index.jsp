@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+
+    <script>
+      function al(){
+          alert("아래 객체 추출 시작 버튼을 눌러서 객체 선택부터 해주세요!");
+      }
+    </script>
+
+
 </head>
 
 <body>
@@ -39,14 +47,14 @@
                         <li class="sidebar-title">Order</li>
 
                         <li class="sidebar-item active ">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="#" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>홈</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="object-select.html" class='sidebar-link'>
+                            <a href="object-select.jsp" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 선택</span>
                             </a>
@@ -61,7 +69,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -77,7 +85,7 @@
 
 
                         <li class="sidebar-item">
-                            <a href="spinner-page.jsp" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -92,7 +100,7 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="result.html" class='sidebar-link'>
+                            <a href="Javascript: al();" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
@@ -182,7 +190,7 @@
 
             <div class="page-content">
               <center>
-                <form action="object-select.html" method="get">
+                <form action="object-select.jsp" method="get">
                   <input type="submit" class="btn btn-lg btn-primary" value="객체 추출 시작"></input>
                 </form>
               </center>
