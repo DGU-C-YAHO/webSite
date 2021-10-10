@@ -114,7 +114,7 @@
           alert("정확한 어노테이션 추출을 위한 객체 ID를 입력해주세요");
         }
         else{
-          location.href="input_video.jsp";
+          location.href="selectSession.jsp?selectedOB="+document.getElementById("selectedOB").value+"&OBJid="+document.getElementById("OBJid").value;
         }
       }
 
