@@ -8,8 +8,10 @@
     request.setCharacterEncoding("UTF-8");
     String selectedOBJ = request.getParameter("selectedOB");
     String OBJid = request.getParameter("OBJid");
+    
     session.setAttribute("selectedOBJ", selectedOBJ);
     session.setAttribute("OBJid", OBJid);
+
     response.sendRedirect("input_video.jsp");
     %>
 </head>

@@ -564,18 +564,50 @@
                       <div class="card-body">
                           <div class="row">
                               <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="disabledInput">선택된 객체</label>
-                                    <input type="text" class="form-control" name = "selectedOB" id="selectedOB" readonly="readonly"
-                                        placeholder="객체를 선택해주세요" required>
-                                </div>
+                                <%
+                                Object ob = session.getAttribute("selectedOBJ");
+                                String ob1 = (String)ob;
+                                if(ob == null){
+                                  %>
+                                  <div class="form-group">
+                                      <label for="disabledInput">선택된 객체</label>
+                                      <input type="text" class="form-control" name = "selectedOB" id="selectedOB" readonly="readonly"
+                                          placeholder="객체를 선택해주세요" required>
+                                  </div>
+                                  <%
+                                }else{
+                                  %>
+                                  <div class="form-group">
+                                      <label for="disabledInput">선택된 객체</label>
+                                      <input type="text" class="form-control" name = "selectedOB" id="selectedOB" readonly="readonly"
+                                          placeholder="객체를 선택해주세요" value="<%=ob%>" required>
+                                  </div>
+                                  <%
+                                }
+                                %>
                               </div>
                               <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="basicInput">객체 클래스 ID 입력</label>
-                                    <input type="text" class="form-control" name= "OBJid" id="OBJid"
-                                        placeholder="변경할 클래스 ID 입력" required>
-                                </div>
+                                <%
+                                Object OBJid = session.getAttribute("OBJid");
+                                String OBJid1 = (String)OBJid;
+                                if(OBJid1 == null){
+                                  %>
+                                  <div class="form-group">
+                                      <label for="basicInput">객체 클래스 ID 입력</label>
+                                      <input type="text" class="form-control" name= "OBJid" id="OBJid"
+                                          placeholder="변경할 클래스 ID 입력" required>
+                                  </div>
+                                  <%
+                                }else{
+                                  %>
+                                  <div class="form-group">
+                                      <label for="basicInput">객체 클래스 ID 입력</label>
+                                      <input type="text" class="form-control" name= "OBJid" id="OBJid"
+                                          placeholder="변경할 클래스 ID 입력"value="<%=OBJid1%>" required>
+                                  </div>
+                                  <%
+                                }
+                                %>
                               </div>
                           </div>
                       </div>
