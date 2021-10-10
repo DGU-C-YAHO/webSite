@@ -12,11 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
-    <script type="text/javascript">
-      function abc(){
-        <%%>
+
+    <script>
+    function goAl(x){
+      var result = confirm("추출이 중단됩니다. 돌아가시겠습니까?");
+      if(result){
+        location.href = x;
       }
+    }
+
+    function al1(){
+      alert(" 값을 입력한 후 아래의 다음단계로 가는 버튼을 눌러주세요");
+    }
     </script>
+
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/base.css">
@@ -33,7 +42,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.jsp"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="Javascript: goAl('index.jsp');"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -45,14 +54,14 @@
                         <li class="sidebar-title">Order</li>
 
                         <li class="sidebar-item">
-                            <a href="index.jsp" class='sidebar-link'>
+                            <a href="Javascript: goAl('index.jsp');" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>홈</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="object-select.html" class='sidebar-link'>
+                            <a href="Javascript: goAl('object-select.jsp');" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>객체 선택</span>
                             </a>
@@ -66,8 +75,28 @@
                           </ul>
                         </div>
 
+                        <%
+                        Object oMode = session.getAttribute("mode");
+                        String mode = (String)oMode;
+                        if(mode == "2"){%>
                         <li class="sidebar-item">
-                            <a href="input_video.jsp" class='sidebar-link'>
+                            <a href="Javascript: goAl('object-add.jsp');" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>객체 추가</span>
+                            </a>
+                        </li>
+
+                        <div style="margin:0 auto; text-align:center;">
+                          <ul style="display: table; margin: auto; padding:0;">
+                            <li class="sidebar-item">
+                                  <img class='arrow' src="images/arrow-down.png" alt="arrow-down.png">
+                            </li>
+                          </ul>
+                        </div>
+                        <%}%>
+
+                        <li class="sidebar-item">
+                            <a href="Javascript: goAl('input-video.jsp');" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>영상 입력</span>
                             </a>
@@ -82,7 +111,7 @@
                         </div>
 
                         <li class="sidebar-item active">
-                            <a href="spinner-page.jsp" class='sidebar-link'>
+                            <a href="#" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>데이터 추출 중</span>
                             </a>
@@ -97,12 +126,11 @@
                         </div>
 
                         <li class="sidebar-item">
-                            <a href="result.html" class='sidebar-link'>
+                            <a href="#" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>추출 완료</span>
                             </a>
                         </li>
-
                     </ul>
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
