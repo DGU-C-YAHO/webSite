@@ -81,6 +81,11 @@
           oth.style.display = "none";
         }
       }
+
+      function getID(nameV){
+        document.getElementById("selectedOB").value = nameV;
+      }
+
 </script>
     <style>
       #divToggle{
@@ -225,14 +230,14 @@
                                           <button onclick="myFunction1()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">탈 것 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="vehicle">
                                             <br>
-                                              <a href="#" class="btn btn-outline-primary">자전거</a>
-                                              <a href="#" class="btn btn-outline-primary">자동차</a>
-                                              <a href="#" class="btn btn-outline-primary">오토바이</a>
-                                              <a href="#" class="btn btn-outline-primary">비행기</a>
-                                              <a href="#" class="btn btn-outline-primary">버스</a>
-                                              <a href="#" class="btn btn-outline-primary">기차</a>
-                                              <a href="#" class="btn btn-outline-primary">트럭</a>
-                                              <a href="#" class="btn btn-outline-primary">보트</a>
+                                              <a href="Javascript: getID('자전거');" class="btn btn-outline-primary" id="byc">자전거</a>
+                                              <a href="Javascript: getID('자동차');" class="btn btn-outline-primary" id="car">자동차</a>
+                                              <a href="Javascript: getID('오토바이');" class="btn btn-outline-primary" id="motoc">오토바이</a>
+                                              <a href="Javascript: getID('비행기');" class="btn btn-outline-primary" id="plane">비행기</a>
+                                              <a href="Javascript: getID('버스');" class="btn btn-outline-primary" id="bus">버스</a>
+                                              <a href="Javascript: getID('기차');" class="btn btn-outline-primary" id="train">기차</a>
+                                              <a href="Javascript: getID('트럭');" class="btn btn-outline-primary" id="truck">트럭</a>
+                                              <a href="Javascript: getID('보트');" class="btn btn-outline-primary" id="boat">보트</a>
                                             </br>
                                           </div>
                                       </div>
@@ -258,16 +263,16 @@
                                           <button onclick="myFunction2()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">생물 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="livingThings">
                                             <br>
-                                                <a href="#" class="btn btn-outline-primary">사람</a>
-                                                <a href="#" class="btn btn-outline-primary">고양이</a>
-                                                <a href="#" class="btn btn-outline-primary">개</a>
-                                                <a href="#" class="btn btn-outline-primary">말</a>
-                                                <a href="#" class="btn btn-outline-primary">양</a>
-                                                <a href="#" class="btn btn-outline-primary">소</a>
-                                                <a href="#" class="btn btn-outline-primary">코끼리</a>
-                                                <a href="#" class="btn btn-outline-primary">곰</a>
-                                                <a href="#" class="btn btn-outline-primary">얼룩말</a>
-                                                <a href="#" class="btn btn-outline-primary">기린</a>
+                                                <a href="Javascript: getID('사람');" class="btn btn-outline-primary">사람</a>
+                                                <a href="Javascript: getID('고양이');" class="btn btn-outline-primary">고양이</a>
+                                                <a href="Javascript: getID('개');" class="btn btn-outline-primary">개</a>
+                                                <a href="Javascript: getID('말');" class="btn btn-outline-primary">말</a>
+                                                <a href="Javascript: getID('양');" class="btn btn-outline-primary">양</a>
+                                                <a href="Javascript: getID('소');" class="btn btn-outline-primary">소</a>
+                                                <a href="Javascript: getID('코끼리');" class="btn btn-outline-primary">코끼리</a>
+                                                <a href="Javascript: getID('곰');" class="btn btn-outline-primary">곰</a>
+                                                <a href="Javascript: getID('얼룩말');" class="btn btn-outline-primary">얼룩말</a>
+                                                <a href="Javascript: getID('기린');" class="btn btn-outline-primary">기린</a>
                                             </div>
                                       </div>
                                   </div>
@@ -292,16 +297,16 @@
                                           <button onclick="myFunction3()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">음식 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="foods">
                                             <br>
-                                                <a href="#" class="btn btn-outline-primary">바나나</a>
-                                                <a href="#" class="btn btn-outline-primary">사과</a>
-                                                <a href="#" class="btn btn-outline-primary">샌드위치</a>
-                                                <a href="#" class="btn btn-outline-primary">오렌지</a>
-                                                <a href="#" class="btn btn-outline-primary">브로콜리</a>
-                                                <a href="#" class="btn btn-outline-primary">당근</a>
-                                                <a href="#" class="btn btn-outline-primary">핫도그</a>
-                                                <a href="#" class="btn btn-outline-primary">피자</a>
-                                                <a href="#" class="btn btn-outline-primary">도넛</a>
-                                                <a href="#" class="btn btn-outline-primary">케이크</a>
+                                                <a href="Javascript: getID('바나나');" class="btn btn-outline-primary">바나나</a>
+                                                <a href="Javascript: getID('사과');" class="btn btn-outline-primary">사과</a>
+                                                <a href="Javascript: getID('샌드위치');" class="btn btn-outline-primary">샌드위치</a>
+                                                <a href="Javascript: getID('오렌지');" class="btn btn-outline-primary">오렌지</a>
+                                                <a href="Javascript: getID('브로콜리');" class="btn btn-outline-primary">브로콜리</a>
+                                                <a href="Javascript: getID('당근');" class="btn btn-outline-primary">당근</a>
+                                                <a href="Javascript: getID('핫도그');" class="btn btn-outline-primary">핫도그</a>
+                                                <a href="Javascript: getID('피자');" class="btn btn-outline-primary">피자</a>
+                                                <a href="Javascript: getID('도넛');" class="btn btn-outline-primary">도넛</a>
+                                                <a href="Javascript: getID('케이크');" class="btn btn-outline-primary">케이크</a>
                                               </br>
                                             </div>
                                       </div>
@@ -327,18 +332,18 @@
                                           <button onclick="myFunction4()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">식기도구 & 주방가전 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="kitchenTools">
                                             <br>
-                                                <a href="#" class="btn btn-outline-primary">병</a>
-                                                <a href="#" class="btn btn-outline-primary">와인 잔</a>
-                                                <a href="#" class="btn btn-outline-primary">컵</a>
-                                                <a href="#" class="btn btn-outline-primary">포크</a>
-                                                <a href="#" class="btn btn-outline-primary">칼</a>
-                                                <a href="#" class="btn btn-outline-primary">숟가락</a>
-                                                <a href="#" class="btn btn-outline-primary">그릇</a>
-                                                <a href="#" class="btn btn-outline-primary">전자 레인지</a>
-                                                <a href="#" class="btn btn-outline-primary">오븐</a>
-                                                <a href="#" class="btn btn-outline-primary">토스터</a>
-                                                <a href="#" class="btn btn-outline-primary">싱크대</a>
-                                                <a href="#" class="btn btn-outline-primary">냉장고</a>
+                                                <a href="Javascript: getID('병');" class="btn btn-outline-primary">병</a>
+                                                <a href="Javascript: getID('와인 잔');" class="btn btn-outline-primary">와인 잔</a>
+                                                <a href="Javascript: getID('컵');" class="btn btn-outline-primary">컵</a>
+                                                <a href="Javascript: getID('포크');" class="btn btn-outline-primary">포크</a>
+                                                <a href="Javascript: getID('칼');" class="btn btn-outline-primary">칼</a>
+                                                <a href="Javascript: getID('숟가락');" class="btn btn-outline-primary">숟가락</a>
+                                                <a href="Javascript: getID('그릇');" class="btn btn-outline-primary">그릇</a>
+                                                <a href="Javascript: getID('전자레인지');" class="btn btn-outline-primary">전자레인지</a>
+                                                <a href="Javascript: getID('오븐');" class="btn btn-outline-primary">오븐</a>
+                                                <a href="Javascript: getID('토스터');" class="btn btn-outline-primary">토스터</a>
+                                                <a href="Javascript: getID('싱크대');" class="btn btn-outline-primary">싱크대</a>
+                                                <a href="Javascript: getID('냉장고');" class="btn btn-outline-primary">냉장고</a>
                                             </div>
                                       </div>
                                   </div>
@@ -366,16 +371,16 @@
                                           <button onclick="myFunction5()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">스포츠(도구) 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="sports">
                                             <br>
-                                            <a href="#" class="btn btn-outline-primary">프리스비</a>
-                                            <a href="#" class="btn btn-outline-primary">스키</a>
-                                            <a href="#" class="btn btn-outline-primary">스노우 보드</a>
-                                            <a href="#" class="btn btn-outline-primary">스포츠 공</a>
-                                            <a href="#" class="btn btn-outline-primary">연</a>
-                                            <a href="#" class="btn btn-outline-primary">야구 방망이</a>
-                                            <a href="#" class="btn btn-outline-primary">야구 글러브</a>
-                                            <a href="#" class="btn btn-outline-primary">스케이트 보드</a>
-                                            <a href="#" class="btn btn-outline-primary">서핑 보드</a>
-                                            <a href="#" class="btn btn-outline-primary">테니스 라켓</a>
+                                            <a href="Javascript: getID('프리스비');" class="btn btn-outline-primary">프리스비</a>
+                                            <a href="Javascript: getID('스키');" class="btn btn-outline-primary">스키</a>
+                                            <a href="Javascript: getID('스노우보드');" class="btn btn-outline-primary">스노우보드</a>
+                                            <a href="Javascript: getID('스포츠 공');" class="btn btn-outline-primary">스포츠 공</a>
+                                            <a href="Javascript: getID('연');" class="btn btn-outline-primary">연</a>
+                                            <a href="Javascript: getID('야구 방망이');" class="btn btn-outline-primary">야구 방망이</a>
+                                            <a href="Javascript: getID('야구 글러브');" class="btn btn-outline-primary">야구 글러브</a>
+                                            <a href="Javascript: getID('스케이트 보드');" class="btn btn-outline-primary">스케이트 보드</a>
+                                            <a href="Javascript: getID('서핑 보드');" class="btn btn-outline-primary">서핑 보드</a>
+                                            <a href="Javascript: getID('테니스 자켓');" class="btn btn-outline-primary">테니스 라켓</a>
                                             </div>
                                       </div>
                                   </div>
@@ -400,12 +405,12 @@
                                           <button onclick="myFunction6()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">소지품 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="belongings">
                                             <br>
-                                            <a href="#" class="btn btn-outline-primary">배낭</a>
-                                            <a href="#" class="btn btn-outline-primary">우산</a>
-                                            <a href="#" class="btn btn-outline-primary">핸드백</a>
-                                            <a href="#" class="btn btn-outline-primary">넥타이</a>
-                                            <a href="#" class="btn btn-outline-primary">여행 가방</a>
-                                            <a href="#" class="btn btn-outline-primary">시계</a>
+                                            <a href="Javascript: getID('베낭');" class="btn btn-outline-primary">배낭</a>
+                                            <a href="Javascript: getID('우산');" class="btn btn-outline-primary">우산</a>
+                                            <a href="Javascript: getID('핸드백');" class="btn btn-outline-primary">핸드백</a>
+                                            <a href="Javascript: getID('넥타이');" class="btn btn-outline-primary">넥타이</a>
+                                            <a href="Javascript: getID('여행가방');" class="btn btn-outline-primary">여행 가방</a>
+                                            <a href="Javascript: getID('시계');" class="btn btn-outline-primary">시계</a>
                                             </div>
                                       </div>
                                   </div>
@@ -430,19 +435,18 @@
                                           <button onclick="myFunction7()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">가구 & 전자기기 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="furn_elect">
                                             <br>
-                                            <a href="#" class="btn btn-outline-primary">의자</a>
-                                            <a href="#" class="btn btn-outline-primary">소파</a>
-                                            <a href="#" class="btn btn-outline-primary">화분</a>
-                                            <a href="#" class="btn btn-outline-primary">침대</a>
-                                            <a href="#" class="btn btn-outline-primary">식탁</a>
-                                            <a href="#" class="btn btn-outline-primary">TV 모니터</a>
-                                            <a href="#" class="btn btn-outline-primary">휴대용 퍼스널 컴퓨터</a>
-                                            <a href="#" class="btn btn-outline-primary">휴대 전화</a>
-                                            <a href="#" class="btn btn-outline-primary">키보드</a>
-                                            <a href="#" class="btn btn-outline-primary">마우스</a>
-                                            <a href="#" class="btn btn-outline-primary">리모컨</a>
-                                            <a href="#" class="btn btn-outline-primary">헤어 드라이어</a>
-
+                                            <a href="Javascript: getID('의자');" class="btn btn-outline-primary">의자</a>
+                                            <a href="Javascript: getID('소파');" class="btn btn-outline-primary">소파</a>
+                                            <a href="Javascript: getID('화분');" class="btn btn-outline-primary">화분</a>
+                                            <a href="Javascript: getID('침대');" class="btn btn-outline-primary">침대</a>
+                                            <a href="Javascript: getID('식탁');" class="btn btn-outline-primary">식탁</a>
+                                            <a href="Javascript: getID('TV모니터');" class="btn btn-outline-primary">TV 모니터</a>
+                                            <a href="Javascript: getID('PC');" class="btn btn-outline-primary">휴대용 퍼스널 컴퓨터</a>
+                                            <a href="Javascript: getID('휴대전화');" class="btn btn-outline-primary">휴대 전화</a>
+                                            <a href="Javascript: getID('키보드');" class="btn btn-outline-primary">키보드</a>
+                                            <a href="Javascript: getID('마우스');" class="btn btn-outline-primary">마우스</a>
+                                            <a href="Javascript: getID('리모컨');" class="btn btn-outline-primary">리모컨</a>
+                                            <a href="Javascript: getID('헤어 드라이어');" class="btn btn-outline-primary">헤어 드라이어</a>
                                             </div>
                                       </div>
                                   </div>
@@ -467,17 +471,17 @@
                                           <button onclick="myFunction8()" style="margin:0 auto; width:auto;" class = "btn btn-outline-primary">기타 리스트 보기</button>
                                           <div style="text-align: center; display:none;" id="otherThings">
                                             <br>
-                                            <a href="#" class="btn btn-outline-primary">신호등</a>
-                                            <a href="#" class="btn btn-outline-primary">소화전</a>
-                                            <a href="#" class="btn btn-outline-primary">정지 표시판</a>
-                                            <a href="#" class="btn btn-outline-primary">주차권 자동 판매기</a>
-                                            <a href="#" class="btn btn-outline-primary">벤치</a>
-                                            <a href="#" class="btn btn-outline-primary">변기</a>
-                                            <a href="#" class="btn btn-outline-primary">도서</a>
-                                            <a href="#" class="btn btn-outline-primary">꽃병</a>
-                                            <a href="#" class="btn btn-outline-primary">가위</a>
-                                            <a href="#" class="btn btn-outline-primary">곰인형</a>
-                                            <a href="#" class="btn btn-outline-primary">칫솔</a>
+                                            <a href="Javascript: getID('신호등');" class="btn btn-outline-primary">신호등</a>
+                                            <a href="Javascript: getID('소화전');" class="btn btn-outline-primary">소화전</a>
+                                            <a href="Javascript: getID('정지표시판');" class="btn btn-outline-primary">정지 표시판</a>
+                                            <a href="Javascript: getID('주차권 자동 판매기');" class="btn btn-outline-primary">주차권 자동 판매기</a>
+                                            <a href="Javascript: getID('벤치');" class="btn btn-outline-primary">벤치</a>
+                                            <a href="Javascript: getID('변기');" class="btn btn-outline-primary">변기</a>
+                                            <a href="Javascript: getID('도서');" class="btn btn-outline-primary">도서</a>
+                                            <a href="Javascript: getID('꽃병');" class="btn btn-outline-primary">꽃병</a>
+                                            <a href="Javascript: getID('가위');" class="btn btn-outline-primary">가위</a>
+                                            <a href="Javascript: getID('곰인형');" class="btn btn-outline-primary">곰인형</a>
+                                            <a href="Javascript: getID('칫솔');" class="btn btn-outline-primary">칫솔</a>
                                             </div>
                                       </div>
                                   </div>
@@ -530,8 +534,8 @@
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="disabledInput">선택된 객체</label>
-                                    <input type="text" class="form-control" name = "selectedOBJ" id="readonlyInput" readonly="readonly"
-                                        placeholder="선택된 객체 표시해야함 선택 안 됬으면 안 넘어가게 해야함" required>
+                                    <input type="text" class="form-control" name = "selectedOBJ" id="selectedOB" readonly="readonly"
+                                        placeholder="객체를 선택해주세요" required>
                                 </div>
                               </div>
                               <div class="col-md-6">
