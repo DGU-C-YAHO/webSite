@@ -155,7 +155,7 @@
                 </section>
 
             </div>
-            <form action="/uploadobj" method="post" enctype="multipart/form-data">
+            <form action="addSession.jsp" method="post" enctype="multipart/form-data">
             <div class="page-content">
               <section class="section">
                   <div class="card">
@@ -200,8 +200,8 @@
               </section>
 
               <center>
-                  <form action="input_video.html" method="get">
-                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로" onclick="uploadFile()"> </input>
+                  <form action="input_video.jsp" method="post" enctype="multipart/form-data">
+                    <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"> </input>
                   </form>
               </center>
               </form>

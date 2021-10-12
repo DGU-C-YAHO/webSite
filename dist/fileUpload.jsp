@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-
 <%@page import="java.io.File"%>
 <%@page import="java.util.Enumeration"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<html lang="ko">
-
+<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ 
 <head>
-    <%
-    request.setCharacterEncoding("UTF-8");
-    String plusOBJ = request.getParameter("plusOBJ");
-    String plusOBJID = request.getParameter("plusOBJID");
-
-    session.setAttribute("plusOBJ", plusOBJ);
-    session.setAttribute("plusOBJID", plusOBJID);
-
-    session.setAttribute("mode", "2"); // mode 1은 객체 추출 모드 2는 객체 추가 모드
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+ 
+<%
     // request.getRealPath("상대경로") 를 통해 파일을 저장할 절대 경로를 구해온다.
     // 운영체제 및 프로젝트가 위치할 환경에 따라 경로가 다르기 때문에 아래처럼 구해오는게 좋음
-    String uploadPath = request.getRealPath("/yolo/webSite/dist/uploads"); 
-    //서버경로에 맞춰서 변경해야함
+    String uploadPath = request.getRealPath("/yolo/webSite/dist/uploads");
     out.println("절대경로 : " + uploadPath +"<br/>");
      
     int maxSize =1024 *1024 *100000;// 한번에 올릴 수 있는 파일 용량 : 100000M로 제한
@@ -42,6 +32,11 @@
     try{
         // request,파일저장경로,용량,인코딩타입,중복파일명에 대한 기본 정책
         multi =new MultipartRequest(request,uploadPath,maxSize,"utf-8",new DefaultFileRenamePolicy());
+         
+        // form내의 input name="name" 인 녀석 value를 가져옴
+        name = multi.getParameter("name");
+        // name="subject" 인 녀석 value를 가져옴
+        subject = multi.getParameter("subject");
          
         // 전송한 전체 파일이름들을 가져옴
         Enumeration files = multi.getFileNames();
@@ -64,13 +59,19 @@
     }catch(Exception e){
         e.printStackTrace();
     }
-
-    response.sendRedirect("input_video.jsp");
-    %>
-</head>
-
-<body>
-
-</body>
-
-</html>
+%>
+<!--
+    해당 페이지는 사용자에게 보여줄 필요가 없고 해당 정보를 전달만 해주면 되기 때문에 hidden으로 했다.
+ -->
+<form action="fileCheck.jsp" method="post" name="fileCheckFormName">
+    <input type="hidden" value="<%=name%>" name="name" />
+    <input type="hidden" value="<%=subject%>" name="subject" />
+    <input type="hidden" value="<%=fileName1%>" name="fileName1" />
+    <input type="hidden" value="<%=originalName1%>" name="originalName1" />
+</form>
+ 
+<!--
+    a태그로 클릭시 파일체크하는 jsp페이지로 이동하도록 함
+    javascript를 이용해서 onclick시 폼태그를 잡아와 submit()을 호출해 폼태그를 전송
+ -->
+<a href="#" onclick="javascript:document.fileCheckFormName.submit()">업로드 파일 확인하기 :<%=fileName1 %></a>
