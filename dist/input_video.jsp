@@ -35,8 +35,15 @@
         if(document.getElementById("youtubeURL").value == "" && document.getElementById("formFileMultiple").value==""){
           alert("파일을 입력해주세요");
         }
+        else if(document.getElementById("formFileMultiple").value == ""){
+          if(document.getElementById("starttime").value == "" && document.getElementById("endtime").value == ""){
+            alert("영상 구간 입력해주세요");
+          }else{
+            location.href="fileUpload.jsp";
+          }
+        }
         else{
-          location.href="";
+          location.href="fileUpload.jsp";
         }
       }
 
@@ -201,7 +208,7 @@
                     </div>
                 </section>
               <div>
-                <form action="/uploadobj" method="post" enctype="multipart/form-data">
+                <form action="fileUpload.jsp" method="post" enctype="multipart/form-data" >
                   <section id="input-file-browser">
                     <div class="row">
                         <div class="col-md-12">
@@ -212,7 +219,7 @@
 
                                 <div class="card-body">
                                                 <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
-                                                <input class="form-control" type="file" id="formFileMultiple" accept=".mp4 , .avi, .wmv, .mkv" multiple>
+                                                <input class="form-control" type="file" id="formFileMultiple"  multiple>
                                             </div>
                                 </div>
                             </div>
@@ -237,13 +244,13 @@
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="disabledInput">영상 시작 시간</label>
-                                    <input type="text" class="form-control" id="starttime" required>
+                                    <input type="text" class="form-control" id="starttime" >
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="basicInput">영상 종료 시간</label>
-                                    <input type="text" class="form-control" id="endtime" required>
+                                    <input type="text" class="form-control" id="endtime" >
                                 </div>
                               </div>
                           </div>
@@ -251,7 +258,7 @@
                   </div>
               </section>
                   <center>
-                  <input style="text-align: middle;" class="btn btn-primary" type="submit" name="Upload" value="추출 시작" onclick="uploadFile()">
+                  <input style="text-align: middle;" class="btn btn-primary" type="submit" name="Upload" value="추출 시작" onclick="vCheck()">
                 </center>
                 </form>
               </div>
