@@ -218,8 +218,8 @@
                                 </div>
 
                                 <div class="card-body">
-                                                <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
-                                                <input class="form-control" type="file" id="formFileMultiple"  multiple>
+                                  <label for="formFileMultiple" class="form-label">파일을 선택해 주세요.</label>
+                                  <input class="form-control" type="file" id="formFileMultiple" name="formFileMultiple" multiple />
                                             </div>
                                 </div>
                             </div>

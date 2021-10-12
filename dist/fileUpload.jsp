@@ -10,14 +10,12 @@
 <html lang="ko">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-
-<%
+    <%
+    request.setCharacterEncoding("UTF-8");
     // request.getRealPath("상대경로") 를 통해 파일을 저장할 절대 경로를 구해온다.
     // 운영체제 및 프로젝트가 위치할 환경에 따라 경로가 다르기 때문에 아래처럼 구해오는게 좋음
     String uploadPath = request.getRealPath("/website/dist/uploads");
+    //서버경로에 맞춰서 변경해야함
     out.println("절대경로 : " + uploadPath +"<br/>");
 
     int maxSize =1024 *1024 *100000;// 한번에 올릴 수 있는 파일 용량 : 100000M로 제한
@@ -56,4 +54,11 @@
     }
 
     response.sendRedirect("spinner-page.jsp");
-%>
+    %>
+</head>
+
+<body>
+
+</body>
+
+</html>
