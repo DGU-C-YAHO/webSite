@@ -14,10 +14,11 @@
     request.setCharacterEncoding("UTF-8");
     String plusOBJ = request.getParameter("plusOBJ");
     String plusOBJID = request.getParameter("plusOBJID");
+    String AnnotationV = request.getParameter("Annotation");
 
     session.setAttribute("plusOBJ", plusOBJ);
     session.setAttribute("plusOBJID", plusOBJID);
-
+    session.setAttribute("anno",AnnotationV );
     session.setAttribute("mode", "2"); // mode 1은 객체 추출 모드 2는 객체 추가 모드
 
     // request.getRealPath("상대경로") 를 통해 파일을 저장할 절대 경로를 구해온다.

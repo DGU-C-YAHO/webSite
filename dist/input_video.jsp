@@ -235,7 +235,7 @@
                       <div class="card-body">
                                   <div class="form-group">
                                       <label for="basicInput">유튜브 영상 링크 주소를 입력해 주세요.</label>
-                                      <input type="text" style="width:100%; size:100;" class="form-control" id="youtubeURL"
+                                      <input type="text" style="width:100%; size:100;" class="form-control" id="youtubeURL" name = "youtubeURL"
                                           placeholder="예) https://www.youtube.com/" >
                                   </div>
                       </div>
@@ -244,13 +244,13 @@
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="disabledInput">영상 시작 시간</label>
-                                    <input type="text" class="form-control" id="starttime" >
+                                    <input type="text" class="form-control" id="starttime" name = "starttime">
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="basicInput">영상 종료 시간</label>
-                                    <input type="text" class="form-control" id="endtime" >
+                                    <input type="text" class="form-control" id="endtime" name = "endtime" >
                                 </div>
                               </div>
                           </div>

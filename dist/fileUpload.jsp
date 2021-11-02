@@ -4,6 +4,10 @@
 <%@page import="java.util.Enumeration"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
+
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.InputStreamReader"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -51,6 +55,43 @@
         }
     }catch(Exception e){
         e.printStackTrace();
+    }
+
+    Object oMode = session.getAttribute("mode");
+    String mode = (String)oMode;
+    String youtubeLink =request.getParameter("youtubeURL");
+    String startTime = request.getParameter("startTime");
+    String endTime = request.getParameter("endTime");
+    String selectedOB = s "";
+    String OBJid =  "";
+    String AnnotationV = "";
+
+    if(mode.compare("1")){
+      selectedOB = (String)session.getAttribute("selectedOB");
+      OBJid = (String)session.getAttribute("OBJid");
+      AnnotationV = (String)session.getAttribute("Annotation");
+    }//일반모드
+    else{
+      selectedOB = (String)session.getAttribute("plusOBJ");
+      OBJid = (String)session.getAttribute("plusOBJID");
+      AnnotationV = (String)session.getAttribute("Annotation");
+    }// 객체 추가
+
+
+    String s;
+    Process p;
+    try {
+        //이 변수에 명령어를 넣어주면 된다.
+        if (youtubeLink ==null){
+          String[] cmd = {"/bin/sh","-c","python demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"
+          -labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+        }// 영상 유튜브 모드 아닐
+        else{
+          String[] cmd = {"/bin/sh","-c","python demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"
+          -labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+        }
+        p = Runtime.getRuntime().exec(cmd);
+    } catch (Exception e) {
     }
 
     response.sendRedirect("spinner-page.jsp");

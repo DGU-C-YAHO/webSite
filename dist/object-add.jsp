@@ -197,10 +197,33 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                  <div class="card-header">
+                      <h4 class="card-title">Annotation 파일 형식 지정</h4>
+                  </div>
+                <div class="card-body">
+                    <div class="row">
+                      <div class="dropdown">
+
+                        <form>
+                          <select name="Annotation"class="btn btn-primary dropdown-toggle me-1" type="button"
+                              id="Annotation" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false" >
+                            <option value="XML">XML</option>
+                            <option value="TXT" selected>TXT</option>
+                          </select>
+                        </form>
+
+                      </div>
+                    </div>
+                </div>
+                </div>
+
               </section>
 
               <center>
-                  <form action="input_video.jsp" method="post" enctype="multipart/form-data">
+                  <form action="addSession.jsp" method="post" enctype="multipart/form-data">
                     <input type="submit" class="btn btn-lg btn-primary" value="다음 단계로"> </input>
                   </form>
               </center>
