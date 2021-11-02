@@ -77,7 +77,6 @@
       AnnotationV = (String)session.getAttribute("Annotation");
     }// 객체 추가
 
-
     String s;
     Process p;
     try {
