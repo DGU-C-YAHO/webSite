@@ -189,6 +189,10 @@
                           <%
                           Object mo = session.getAttribute("mode");
                           String mode1 = (String)mo;
+
+                          Object Annotation = session.getAttribute("Annotation");
+                          String Annotation1 = (String)Annotation;
+
                           String name = "";
                           if(mode1 == "1"){
                             Object name1 = session.getAttribute("selectedOBJ");
@@ -197,7 +201,7 @@
                             Object name1 = session.getAttribute("plusOBJ");
                             name = (String)name1;
                           }
-                          out.println(name+"을 선택하셨습니다.");
+                          out.println(name+","+Annotation+"를 선택하셨습니다.");
                           %>
                           <br>
                           1. 유튜브 영상을 사용하실 거면 링크를 넣어주세요<br>
