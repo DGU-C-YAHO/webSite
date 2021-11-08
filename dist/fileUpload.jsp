@@ -82,12 +82,12 @@
     try {
         //이 변수에 명령어를 넣어주면 된다.
         if (youtubeLink ==null){
-          String[] cmd = {"/bin/sh","-c","python demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+          String[] cmd = {"/bin/sh","-c","python ./home/ubuntu/yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
           //new ProcessBuilder("/bin/sh","-c", cmd).start();
           p = Runtime.getRuntime().exec(cmd);
         }// 영상 유튜브 모드 아닐
         else{
-          String[] cmd = {"/bin/sh","-c","python demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+          String[] cmd = {"/bin/sh","-c","python ./home/ubuntu/yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
           //new ProcessBuilder("/bin/sh","-c", cmd).start();
           p = Runtime.getRuntime().exec(cmd);
         }
