@@ -76,7 +76,7 @@
       OBJid = (String)session.getAttribute("plusOBJID");
       AnnotationV = (String)session.getAttribute("Annotation");
     }// 객체 추가
-    String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\" -labelName \"car\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+  
     String s;
     Process p;
 
