@@ -12,7 +12,6 @@
 <head>
     <%
     response.sendRedirect("result.html");
-    
     %>
 </head>
 
