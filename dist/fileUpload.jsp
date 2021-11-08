@@ -79,7 +79,7 @@
 
     String s;
     Process p;
-    String[] cmd;
+    String[] cmd={""};
     try {
         //이 변수에 명령어를 넣어주면 된다.
         if (youtubeLink ==null){
