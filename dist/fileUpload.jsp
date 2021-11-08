@@ -60,14 +60,14 @@
     Object oMode = session.getAttribute("mode");
     String mode = (String)oMode;
     String youtubeLink =request.getParameter("youtubeURL");
-    String startTime = request.getParameter("startTime");
-    String endTime = request.getParameter("endTime");
+    String startTime = request.getParameter("starttime");
+    String endTime = request.getParameter("endtime");
     String selectedOB = "";
     String OBJid =  "";
     String AnnotationV = "";
 
     if(mode.equals("1")){
-      selectedOB = (String)session.getAttribute("selectedOB");
+      selectedOB = (String)session.getAttribute("selectedOBJ");
       OBJid = (String)session.getAttribute("OBJid");
       AnnotationV = (String)session.getAttribute("Annotation");
     }//일반모드
@@ -76,24 +76,21 @@
       OBJid = (String)session.getAttribute("plusOBJID");
       AnnotationV = (String)session.getAttribute("Annotation");
     }// 객체 추가
-
+    String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\" -labelName \"car\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
     String s;
     Process p;
+
     try {
         //이 변수에 명령어를 넣어주면 된다.
         if (youtubeLink ==null){
-          String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+          String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\" -labelName \"car\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
           //new ProcessBuilder("/bin/sh","-c", cmd).start();
           p = Runtime.getRuntime().exec(cmd);
         }// 영상 유튜브 모드 아닐
         else{
-          //String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+          String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\" -labelName \"car\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
           //new ProcessBuilder("/bin/sh","-c", cmd).start();
-
-          String[] cmd1 = {"/bin/sh","-c","pwd"};
-          p = Runtime.getRuntime().exec(cmd1);
-
-          //p = Runtime.getRuntime().exec(cmd);
+          p = Runtime.getRuntime().exec(cmd);
         }
     } catch (Exception e) {
     }

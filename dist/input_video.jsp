@@ -39,13 +39,15 @@
           if(document.getElementById("starttime").value == "" && document.getElementById("endtime").value == ""){
             alert("영상 구간 입력해주세요");
           }else{
-            location.href="fileUpload.jsp";
+            nVideo.submit();
           }
         }
         else{
-          location.href="fileUpload.jsp";
+          nVideo.submit();
         }
       }
+
+      //javascript에서 post방식으로 데이터 전송
 
       function goAl(x){
         var result = confirm("입력하신 영상 정보가 지워집니다. 돌아가시겠습니까?");
@@ -212,7 +214,7 @@
                     </div>
                 </section>
               <div>
-                <form action="fileUpload.jsp" method="post" enctype="multipart/form-data" >
+                <form action="fileUpload.jsp" method="get" name="nVideo" enctype="multipart/form-data" >
                   <section id="input-file-browser">
                     <div class="row">
                         <div class="col-md-12">
