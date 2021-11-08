@@ -87,9 +87,13 @@
           p = Runtime.getRuntime().exec(cmd);
         }// 영상 유튜브 모드 아닐
         else{
-          String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
+          //String[] cmd = {"/bin/sh","-c","python ./yolov4_종설/Yolov4_model/demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
           //new ProcessBuilder("/bin/sh","-c", cmd).start();
-          p = Runtime.getRuntime().exec(cmd);
+
+          String[] cmd1 = {"/bin/sh","-c","pwd"};
+          p = Runtime.getRuntime().exec(cmd1);
+
+          //p = Runtime.getRuntime().exec(cmd);
         }
     } catch (Exception e) {
     }
