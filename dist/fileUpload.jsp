@@ -62,11 +62,11 @@
     String youtubeLink =request.getParameter("youtubeURL");
     String startTime = request.getParameter("startTime");
     String endTime = request.getParameter("endTime");
-    String selectedOB = "";
+    String selectedOB = ja"";
     String OBJid =  "";
     String AnnotationV = "";
 
-    if(mode.compare("1")){
+    if(mode.equals("1")){
       selectedOB = (String)session.getAttribute("selectedOB");
       OBJid = (String)session.getAttribute("OBJid");
       AnnotationV = (String)session.getAttribute("Annotation");
@@ -79,6 +79,7 @@
 
     String s;
     Process p;
+    String[] cmd;
     try {
         //이 변수에 명령어를 넣어주면 된다.
         if (youtubeLink ==null){
