@@ -68,15 +68,15 @@
 
     if(mode.equals("1")){
       selectedOB = (String)session.getAttribute("selectedOBJ");
-      OBJid = (String)session.getAttribute("OBJid");
-      AnnotationV = (String)session.getAttribute("Annotation");
+      //OBJid = (String)session.getAttribute("OBJid");
+      //AnnotationV = (String)session.getAttribute("Annotation");
     }//일반모드
     else{
       selectedOB = (String)session.getAttribute("plusOBJ");
-      OBJid = (String)session.getAttribute("plusOBJID");
-      AnnotationV = (String)session.getAttribute("Annotation");
+      //OBJid = (String)session.getAttribute("plusOBJID");
+      //AnnotationV = (String)session.getAttribute("Annotation");
     }// 객체 추가
-  
+
     String s;
     Process p;
 
