@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <%@page import="java.io.File"%>
+<%@page import="java.lang"%>
 <%@page import="java.util.Enumeration"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
@@ -83,12 +84,12 @@
         //이 변수에 명령어를 넣어주면 된다.
         if (youtubeLink ==null){
           String[] cmd = {"/bin/sh","-c","python demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
-          new ProcessBuilder("/bin/sh","-c", cmd);
+          new ProcessBuilder("/bin/sh","-c", cmd).start();
           //p = Runtime.getRuntime().exec(cmd);
         }// 영상 유튜브 모드 아닐
         else{
           String[] cmd = {"/bin/sh","-c","python demo.py -cfgfile \"./cfg/yolov4.cfg\" -weightfile \"./yolov4.weights\"-labelName \" "+selectedOB+"\"-urlLink \"" +youtubeLink+"\"-endTime "+endTime};
-          new ProcessBuilder("/bin/sh","-c", cmd);
+          new ProcessBuilder("/bin/sh","-c", cmd).start();
           //p = Runtime.getRuntime().exec(cmd);
         }
     } catch (Exception e) {
