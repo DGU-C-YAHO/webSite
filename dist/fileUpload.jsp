@@ -62,7 +62,7 @@
     String youtubeLink =request.getParameter("youtubeURL");
     String startTime = request.getParameter("startTime");
     String endTime = request.getParameter("endTime");
-    String selectedOB = s "";
+    String selectedOB = "";
     String OBJid =  "";
     String AnnotationV = "";
 
