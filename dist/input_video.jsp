@@ -190,7 +190,7 @@
                           Object mo = session.getAttribute("mode");
                           String mode1 = (String)mo;
 
-                          Object Annotation = session.getAttribute("Annotation");
+                          Object Annotation = session.getAttribute("anno");
                           String Annotation1 = (String)Annotation;
 
                           String name = "";
